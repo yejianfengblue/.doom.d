@@ -79,7 +79,7 @@
 
 (map! :leader
       :desc "M-x"                   "SPC"    #'execute-extended-command
-      :desc "Comment"               ";" #'evilnc-comment-operator
+      :desc "Comment"               ";"      #'evilnc-comment-operator
       :leader)
 
 (after! org
