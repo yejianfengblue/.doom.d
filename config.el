@@ -81,3 +81,7 @@
       :desc "M-x"                   "SPC"    #'execute-extended-command
       :leader)
 
+(custom-set-faces!
+  '(vertico-current :background "black")
+  '(region :foreground "black"
+           :background "orange"))
