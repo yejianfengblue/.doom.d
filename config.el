@@ -81,6 +81,10 @@
       :desc "M-x"                   "SPC"    #'execute-extended-command
       :leader)
 
+(after! org
+        (setq org-roam-directory "/file/mega/org-roam")
+        (setq org-roam-index-file "/file/mega/org-roam/index.org"))
+
 (custom-set-faces!
   '(vertico-current :background "black")
   '(region :foreground "black"
