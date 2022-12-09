@@ -122,7 +122,9 @@
       "s" #'evil-surround-region)
 
 (map! :map with-editor-mode-map
-      "C-c C-x" #'with-editor-cancel)
+      :n ",," #'with-editor-finish
+      :n ",." #'with-editor-cancel
+      :n ",k" #'with-editor-cancel)
 
 (after! org
         (setq org-roam-directory "/file/mega/org-roam")
