@@ -80,7 +80,25 @@
 (map! :leader
       :desc "M-x"                   "SPC"    #'execute-extended-command
       :desc "Comment"               ";"      #'evilnc-comment-operator
-      :leader)
+      :desc "Jump"                  "j"      #'evil-avy-goto-char-timer
+      :desc "Paste"                 "v"      #'consult-yank-pop
+      :desc "Last buffer"           "o"      #'evil-switch-to-windows-last-buffer
+
+      :desc "Maximize"              "wm"     #'doom/window-maximize-buffer
+
+      "n" nil
+      (:prefix ("n" . "note org-roam")
+       :desc "Find node"                  "f" #'org-roam-node-find
+       :desc "Find ref"                   "r" #'org-roam-ref-find
+       :desc "Show graph"                 "g" #'org-roam-graph
+       :desc "Insert node"                "i" #'org-roam-node-insert
+       :desc "Capture to node"            "n" #'org-roam-capture
+       :desc "Launch roam buffer"         "R" #'org-roam-buffer-display-dedicated
+       :desc "Sync database"              "s" #'org-roam-db-sync
+      )
+
+      :desc "Org src"               "i"      (cmd!! #'org-insert-structure-template "s")
+)
 
 (after! org
         (setq org-roam-directory "/file/mega/org-roam")
