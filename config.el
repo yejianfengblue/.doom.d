@@ -100,6 +100,26 @@
       :desc "Org src"               "i"      (cmd!! #'org-insert-structure-template "s")
 )
 
+(map! :map evil-normal-state-map
+      "f" #'evil-snipe-s
+      "F" #'evil-snipe-S
+      "!" #'evil-first-non-blank
+      "#" #'evil-jump-item)
+(map! :map evil-operator-state-map
+      "f" #'evil-snipe-s
+      "F" #'evil-snipe-S
+      "d" #'evil-snipe-x
+      "D" #'evil-snipe-X
+      "!" #'evil-first-non-blank
+      "#" #'evil-jump-item)
+(map! :map evil-visual-state-map
+      "f" #'evil-snipe-s
+      "F" #'evil-snipe-S
+      "d" #'evil-snipe-x
+      "D" #'evil-snipe-X
+      "!" #'evil-first-non-blank
+      "#" #'evil-jump-item
+      "s" #'evil-surround-region)
 (after! org
         (setq org-roam-directory "/file/mega/org-roam")
         (setq org-roam-index-file "/file/mega/org-roam/index.org"))
