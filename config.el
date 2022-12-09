@@ -120,6 +120,10 @@
       "!" #'evil-first-non-blank
       "#" #'evil-jump-item
       "s" #'evil-surround-region)
+
+(map! :map with-editor-mode-map
+      "C-c C-x" #'with-editor-cancel)
+
 (after! org
         (setq org-roam-directory "/file/mega/org-roam")
         (setq org-roam-index-file "/file/mega/org-roam/index.org"))
