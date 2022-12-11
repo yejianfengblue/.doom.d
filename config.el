@@ -97,7 +97,8 @@
        :desc "Sync database"              "s" #'org-roam-db-sync
       )
 
-      :desc "Org src"               "i"      (cmd!! #'org-insert-structure-template "s")
+      :desc "Org src"               "i"      (cmd! (org-insert-structure-template "src") (evil-append 0))
+
 )
 
 (map! :map evil-normal-state-map
