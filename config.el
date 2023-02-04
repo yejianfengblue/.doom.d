@@ -139,3 +139,6 @@
   '(vertico-current :background "black")
   '(region :foreground "black"
            :background "orange"))
+
+(setq-default fill-column 120)
+(setq-default auto-fill-function 'do-auto-fill)
